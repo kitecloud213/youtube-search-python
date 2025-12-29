@@ -180,7 +180,7 @@ class SearchVideos(LegacySearchInternal):
             if videoElementKey in element.keys():
                 self.resultComponents.append(self._getVideoComponent(element))
             if shelfElementKey in element.keys():
-                for shelfElement in self._getShelfComponent(element)['elements']:
+                for shelfElement in self._getShelfComponent(element)['elements'] or []:
                     self.resultComponents.append(self._getVideoComponent(shelfElement))
             if len(self.resultComponents) >= self.limit:
                 break

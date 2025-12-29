@@ -266,7 +266,7 @@ class PlaylistCore(RequestCore):
                                                            'thumbnail', 'thumbnails']),
                         },
                     }
-                    component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
+                    component['channel']['link'] = 'https://www.youtube.com/channel/' + str(component['channel']['id'])
                     playlistComponent.update(component)
         if mode in ['getVideos', None]:
             self.continuationKey = None

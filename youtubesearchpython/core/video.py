@@ -165,7 +165,7 @@ class VideoCore(RequestCore):
             }
             component['isLiveNow'] = component['isLiveContent'] and component['duration']['secondsText'] == "0"
             component['link'] = 'https://www.youtube.com/watch?v=' + component['id']
-            component['channel']['link'] = 'https://www.youtube.com/channel/' + component['channel']['id']
+            component['channel']['link'] = 'https://www.youtube.com/channel/' + str(component['channel']['id'])
             videoComponent.update(component)
         if mode in ['getFormats', None]:
             videoComponent.update(
